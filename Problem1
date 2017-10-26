@@ -1,0 +1,45 @@
+public class Problem1 {
+    public int a,b,c,d;         // variablws for problems
+    public int extraNumber;     // a spare number that can be taken found later
+
+    public static int setSolution(int ... a){
+        int finalNumber = 0;
+        int len = a.length - 1;
+        /*
+        * for(int t : a)
+        * ==
+        * for(int i = 0; i < a.length; I++{
+        * int t = a[i];}
+        *
+        *
+        * */
+        for (int t : a) {
+            finalNumber += t * Math.pow(10, len);        //first in array
+            len--;
+        }
+        return finalNumber;
+    }
+    public static boolean areDistictDigits(int ... a){
+        int check = a[0];
+        for(int p = 1; p < a.length; p++){
+            if(p == check)
+                return false;
+        }
+
+        return 
+    }
+    public static void main(String[] args){
+        int[] array;
+        for(int i = 0; i < 10; i++){
+            for(int j = 0; j < 10; j++){
+                for(int k = 0; k < 10; k++){
+                    array = new int[3];
+                    /*array[0] = i;
+                    array[1] = j;
+                    array[2] = k;*/
+                    System.out.println(setSolution(i,j,k));
+                }
+            }
+        }
+    }
+}
