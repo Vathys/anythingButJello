@@ -24,11 +24,17 @@ public class Helper_Class {
     }
 
     public static int[] switchNum(int pre, int aft, int[] a){
-        for(int i = 0; i < a.length; i++){
-            if(a[i] == pre){
-                a[i] = aft;
-            }
-        }
+    	
+    	for(int i = 0; i < a.length; i++){
+    		if(a[i] == pre){
+    			a[i] = aft;
+    		}
+    		else if(a[i] == aft){
+    			a[i] = pre;
+    		}
+    	}
+    	
         return a;
+        
     }
 }
